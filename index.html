@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yasmina Nigmanova — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Orbitron:wght@700&family=Righteous&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">Yasmina Nigmanova</span>
+    <div class="nav-links">
+      <span class="nav-link active">Home</span>
+      <span class="nav-link">Projects</span>
+      <span class="nav-link">About</span>
+      <span class="nav-link">Contact</span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <div class="nav-avatar">YN</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-badge">✦ Featured Project</div>
+    <div class="hero-screenshot-area">
+      <div class="hero-screenshot-box">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <span class="screenshot-label">Project screenshot</span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Lead project · 2024</p>
+      <h1 class="hero-title">Project Title<br>Goes Here</h1>
+      <p class="hero-desc">A brief description of your most impressive work. What problem did you solve? What was the impact?</p>
+      <div class="hero-actions">
+        <button class="btn-play">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View project
+        </button>
+        <button class="btn-info">Learn more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH BRAND STRIP -->
+  <div class="brand-strip">
+
+    <!-- HTML — Bangers font, fiery orange-red, bracket styling -->
+    <div class="brand-tile">
+      <span class="brand-html"><span class="html-bracket">&lt;/&gt;</span> HTML</span>
+    </div>
+
+    <!-- CSS — Righteous font, vivid blue, hash prefix -->
+    <div class="brand-tile">
+      <span class="brand-css"><span class="css-hash">#</span>CSS</span>
+    </div>
+
+    <!-- JavaScript — Permanent Marker, bold yellow, JS badge style -->
+    <div class="brand-tile">
+      <span class="brand-js">JS</span>
+    </div>
+
+    <!-- Vue — Orbitron, emerald green, chevron prefix -->
+    <div class="brand-tile">
+      <span class="brand-vue"><span class="vue-v">▲</span>Vue</span>
+    </div>
+
+    <!-- JSON — Share Tech Mono, cool silver, brace wrapped -->
+    <div class="brand-tile">
+      <span class="brand-json"><span class="json-brace">{</span> JSON <span class="json-brace">}</span></span>
+    </div>
+
+  </div>
+
+  <!-- CONTINUE WHERE YOU LEFT OFF -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-title">Continue where you left off</span>
+      <span class="section-more">See all</span>
+    </div>
+    <div class="cards-row">
+      <div class="card card-continue" v-for="item in continueItems" :key="item.title">
+        <div class="card-thumb continue-thumb">
+          <div class="play-circle">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ item.title }}</p>
+          <p class="card-sub">{{ item.sub }}</p>
+          <div class="prog-track"><div class="prog-fill" :style="{ width: item.progress + '%' }"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-title">Featured projects</span>
+      <span class="section-more">Browse all</span>
+    </div>
+    <div class="cards-row">
+      <div class="card card-wide" v-for="p in featuredProjects" :key="p.title">
+        <div class="card-thumb wide-thumb">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" v-html="p.icon"></svg>
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ p.title }}</p>
+          <p class="card-sub">{{ p.sub }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section class="section">
+    <div class="section-header"><span class="section-title">About me</span></div>
+    <div class="about-card">
+      <div class="about-avatar-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fb3ff" stroke-width="1.5">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <div class="about-content">
+        <p class="about-name">Yasmina Nigmanova — Role / Title</p>
+        <p class="about-bio">A short bio about who you are, what you do, and what you're passionate about. Keep it personal and memorable.</p>
+        <div class="about-pills">
+          <span class="pill">📍 City, Country</span>
+          <span class="pill">💼 Open to work</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="section-header"><span class="section-title">Skills &amp; tools</span></div>
+    <div class="cards-row skill-grid">
+      <div class="card card-sq" v-for="s in skills" :key="s.label">
+        <div class="card-thumb sq-thumb">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" v-html="s.icon"></svg>
+        </div>
+        <div class="card-body"><p class="card-title sm">{{ s.label }}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST WORK -->
+  <section class="section section-last">
+    <div class="section-header">
+      <span class="section-title">Latest work</span>
+      <span class="section-more">All projects</span>
+    </div>
+    <div class="cards-row">
+      <div class="card card-tall" v-for="w in latestWork" :key="w.title">
+        <div class="card-thumb tall-thumb">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" v-html="w.icon"></svg>
+        </div>
+        <div class="card-body">
+          <p class="card-title sm">{{ w.title }}</p>
+          <p class="card-sub">{{ w.year }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-logo">Yasmina Nigmanova</span>
+    <div class="footer-links">
+      <span class="footer-link">LinkedIn</span>
+      <span class="footer-link">GitHub</span>
+      <span class="footer-link">Twitter / X</span>
+      <span class="footer-link">Resume</span>
+    </div>
+    <span class="footer-copy">© 2024 Yasmina Nigmanova</span>
+  </footer>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
