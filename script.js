@@ -1,3 +1,18 @@
+// Splash Screen Logic
+const splash = document.getElementById('splash-screen');
+const main = document.getElementById('app');
+
+// Simulate a loading time of 3 seconds
+setTimeout(() => {
+    splash.style.opacity = '0'; // Fade out
+    
+    setTimeout(() => {
+        splash.style.display = 'none';
+        main.style.display = 'block';
+        document.body.style.overflow = 'auto'; // Allow scrolling
+    }, 1000); // Matches the CSS transition time
+}, 3000);
+
 // ═══════════════════════════════════════════════════════════
 //  YASMINA NIGMANOVA — PORTFOLIO  |  main.js
 //  All content data lives here. Edit to update the site.

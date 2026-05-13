@@ -10,7 +10,12 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-<div id="app">
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="imgs/Yasmina.png" alt="Portfolio Logo" class="logo">
+    </div>
+
+<div id="app" style="display: none;">
 
   <!-- NAV -->
   <nav class="nav">
@@ -64,12 +69,12 @@
 
     <!-- HTML — Bangers font, fiery orange-red, bracket styling -->
     <div class="brand-tile">
-      <span class="brand-html"><span class="html-bracket">&lt;/&gt;</span> HTML</span>
+      <span class="brand-html">HTML</span>
     </div>
 
     <!-- CSS — Righteous font, vivid blue, hash prefix -->
     <div class="brand-tile">
-      <span class="brand-css"><span class="css-hash">#</span>CSS</span>
+      <span class="brand-css">CSS</span>
     </div>
 
     <!-- JavaScript — Permanent Marker, bold yellow, JS badge style -->
@@ -79,12 +84,12 @@
 
     <!-- Vue — Orbitron, emerald green, chevron prefix -->
     <div class="brand-tile">
-      <span class="brand-vue"><span class="vue-v">▲</span>Vue</span>
+      <span class="brand-vue">Vue</span>
     </div>
 
     <!-- JSON — Share Tech Mono, cool silver, brace wrapped -->
     <div class="brand-tile">
-      <span class="brand-json"><span class="json-brace">{</span> JSON <span class="json-brace">}</span></span>
+      <span class="brand-json">JSON</span>
     </div>
 
   </div>
@@ -196,6 +201,6 @@
   </footer>
 
 </div>
-<script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
