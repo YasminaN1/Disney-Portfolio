@@ -102,10 +102,11 @@
     </div>
     <div class="cards-row">
       <div class="card card-continue" v-for="item in continueItems" :key="item.title">
-        <div class="card-thumb continue-thumb">
-          <div class="play-circle">
+        <div class="card-thumb continue-thumb project-thumb">
+          <div class="project-image" :style="{ backgroundImage: item.image ? 'url(' + item.image + ')' : 'none' }"></div>
+          <a class="play-circle project-play" :href="item.link || '#'" target="_blank" rel="noopener noreferrer">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </div>
+          </a>
         </div>
         <div class="card-body">
           <p class="card-title">{{ item.title }}</p>
@@ -116,16 +117,63 @@
     </div>
   </section>
 
-  <!-- FEATURED PROJECTS -->
+  <!-- SENIOR YEAR PROJECTS -->
   <section class="section">
     <div class="section-header">
-      <span class="section-title">Featured projects</span>
+      <span class="section-title">Senior Year</span>
       <span class="section-more">Browse all</span>
     </div>
     <div class="cards-row">
-      <div class="card card-wide" v-for="p in featuredProjects" :key="p.title">
-        <div class="card-thumb wide-thumb">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" v-html="p.icon"></svg>
+      <div class="card card-wide" v-for="p in seniorProjects" :key="p.title">
+        <div class="card-thumb wide-thumb project-thumb">
+          <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
+          <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </a>
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ p.title }}</p>
+          <p class="card-sub">{{ p.sub }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUNIOR YEAR PROJECTS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-title">Junior Year</span>
+      <span class="section-more">Browse all</span>
+    </div>
+    <div class="cards-row">
+      <div class="card card-wide" v-for="p in juniorProjects" :key="p.title">
+        <div class="card-thumb wide-thumb project-thumb">
+          <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
+          <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </a>
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ p.title }}</p>
+          <p class="card-sub">{{ p.sub }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOPHOMORE YEAR PROJECTS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-title">Sophomore Year</span>
+      <span class="section-more">Browse all</span>
+    </div>
+    <div class="cards-row">
+      <div class="card card-wide" v-for="p in sophomoreProjects" :key="p.title">
+        <div class="card-thumb wide-thumb project-thumb">
+          <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
+          <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </a>
         </div>
         <div class="card-body">
           <p class="card-title">{{ p.title }}</p>

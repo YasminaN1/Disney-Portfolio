@@ -26,36 +26,75 @@ const portfolioData = {
     {
       title: "Ongoing project",
       sub: "In progress · 70% complete",
-      progress: 70
+      progress: 70,
+      link: "#",
+      image: ""
     },
     {
       title: "Side project name",
       sub: "Case study · 45% complete",
-      progress: 45
+      progress: 45,
+      link: "#",
+      image: ""
     }
   ],
 
-  // Main showcase projects — wide card row
-  featuredProjects: [
+  // Main showcase projects — wide card row for Senior Year
+  seniorProjects: [
     {
-      title: "Dashboard redesign",
-      sub: "Product design · 2024",
+      title: "Senior capstone",
+      sub: "Final year project · 2024",
+      link: "#",
+      image: "",
       icon: `<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>`
     },
     {
-      title: "Mobile app concept",
-      sub: "UX / UI · 2023",
+      title: "Portfolio website",
+      sub: "UX / UI · 2024",
+      link: "#",
+      image: "",
       icon: `<rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>`
     },
     {
-      title: "Web application",
-      sub: "Full stack · 2023",
+      title: "Interactive story",
+      sub: "Multimedia · 2024",
+      link: "#",
+      image: "",
       icon: `<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>`
+    }
+  ],
+
+  juniorProjects: [
+    {
+      title: "Junior project 1",
+      sub: "Web design · 2023",
+      link: "#",
+      image: "",
+      icon: `<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>`
     },
     {
-      title: "Brand identity",
+      title: "Junior project 2",
+      sub: "Animation · 2023",
+      link: "#",
+      image: "",
+      icon: `<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>`
+    }
+  ],
+
+  sophomoreProjects: [
+    {
+      title: "Sophomore project 1",
+      sub: "Illustration · 2022",
+      link: "#",
+      image: "",
+      icon: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>`
+    },
+    {
+      title: "Sophomore project 2",
       sub: "Branding · 2022",
-      icon: `<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>`
+      link: "#",
+      image: "",
+      icon: `<path d="M12 2l4 7H8l4-7z"/><path d="M5 9h14v11H5z"/>`
     }
   ],
 
@@ -113,7 +152,9 @@ createApp({
   data() {
     return {
       continueItems:    portfolioData.continueItems,
-      featuredProjects: portfolioData.featuredProjects,
+      seniorProjects:  portfolioData.seniorProjects,
+      juniorProjects:  portfolioData.juniorProjects,
+      sophomoreProjects: portfolioData.sophomoreProjects,
       skills:           portfolioData.skills,
       latestWork:       portfolioData.latestWork
     };
