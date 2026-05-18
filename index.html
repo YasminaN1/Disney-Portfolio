@@ -68,28 +68,28 @@
   <div class="brand-strip">
 
     <!-- HTML — Bangers font, fiery orange-red, bracket styling -->
-    <div class="brand-tile">
-      <span class="brand-html">HTML</span>
+    <div class="brand-tile brand-html">
+      <span>HTML</span>
     </div>
 
     <!-- CSS — Righteous font, vivid blue, hash prefix -->
-    <div class="brand-tile">
-      <span class="brand-css">CSS</span>
+    <div class="brand-tile brand-css">
+      <span>CSS</span>
     </div>
 
     <!-- JavaScript — Permanent Marker, bold yellow, JS badge style -->
-    <div class="brand-tile">
-      <span class="brand-js">JS</span>
+    <div class="brand-tile brand-js">
+      <span>JS</span>
     </div>
 
     <!-- Vue — Orbitron, emerald green, chevron prefix -->
-    <div class="brand-tile">
-      <span class="brand-vue">Vue</span>
+    <div class="brand-tile brand-vue">
+      <span>Vue</span>
     </div>
 
     <!-- JSON — Share Tech Mono, cool silver, brace wrapped -->
-    <div class="brand-tile">
-      <span class="brand-json">JSON</span>
+    <div class="brand-tile brand-json">
+      <span>JSON</span>
     </div>
 
   </div>
@@ -123,19 +123,27 @@
       <span class="section-title">Senior Year</span>
       <span class="section-more">Browse all</span>
     </div>
-    <div class="cards-row">
-      <div class="card card-wide" v-for="p in seniorProjects" :key="p.title">
-        <div class="card-thumb wide-thumb project-thumb">
-          <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
-          <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </a>
-        </div>
-        <div class="card-body">
-          <p class="card-title">{{ p.title }}</p>
-          <p class="card-sub">{{ p.sub }}</p>
+    <div class="cards-row-wrapper">
+      <button class="scroll-button left" @click="scrollRow('left','seniorRow')" aria-label="Scroll senior row left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="cards-row senior-row" ref="seniorRow">
+        <div class="card card-wide" v-for="p in seniorProjects" :key="p.title">
+          <div class="card-thumb wide-thumb project-thumb">
+            <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
+            <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-title">{{ p.title }}</p>
+            <p class="card-sub">{{ p.sub }}</p>
+          </div>
         </div>
       </div>
+      <button class="scroll-button right" @click="scrollRow('right','seniorRow')" aria-label="Scroll senior row right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
     </div>
   </section>
 
@@ -145,19 +153,27 @@
       <span class="section-title">Junior Year</span>
       <span class="section-more">Browse all</span>
     </div>
-    <div class="cards-row">
-      <div class="card card-wide" v-for="p in juniorProjects" :key="p.title">
-        <div class="card-thumb wide-thumb project-thumb">
-          <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
-          <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </a>
-        </div>
-        <div class="card-body">
-          <p class="card-title">{{ p.title }}</p>
-          <p class="card-sub">{{ p.sub }}</p>
+    <div class="cards-row-wrapper">
+      <button class="scroll-button left" @click="scrollRow('left','juniorRow')" aria-label="Scroll junior row left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="cards-row junior-row" ref="juniorRow">
+        <div class="card card-wide" v-for="p in juniorProjects" :key="p.title">
+          <div class="card-thumb wide-thumb project-thumb">
+            <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
+            <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-title">{{ p.title }}</p>
+            <p class="card-sub">{{ p.sub }}</p>
+          </div>
         </div>
       </div>
+      <button class="scroll-button right" @click="scrollRow('right','juniorRow')" aria-label="Scroll junior row right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
     </div>
   </section>
 
@@ -204,9 +220,9 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- EXTRACURRICULARS -->
   <section class="section">
-    <div class="section-header"><span class="section-title">Skills &amp; tools</span></div>
+    <div class="section-header"><span class="section-title">Extracurriculars</span></div>
     <div class="cards-row skill-grid">
       <div class="card card-sq" v-for="s in skills" :key="s.label">
         <div class="card-thumb sq-thumb">

@@ -1,9 +1,4 @@
-/* ═══════════════════════════════════════════════════════
-   YASMINA NIGMANOVA — PORTFOLIO  |  style.css
-   Disney+ dark theme
-═══════════════════════════════════════════════════════ */
 
-/* ── Reset ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -204,6 +199,26 @@ button { cursor: pointer; font-family: inherit; }
   background: #142236;
 }
 
+.brand-html:hover {
+  background: rgba(228,77,38,0.18);
+}
+
+.brand-css:hover {
+  background: rgba(41,101,241,0.18);
+}
+
+.brand-js:hover {
+  background: rgba(240,219,79,0.18);
+}
+
+.brand-vue:hover {
+  background: rgba(66,184,131,0.18);
+}
+
+.brand-json:hover {
+  background: rgba(200,206,216,0.18);
+}
+
 /* ── HTML  ·  Bangers (condensed comic slab) · orange-red fire ── */
 .brand-html {
   font-family: 'Bangers', cursive;
@@ -229,10 +244,6 @@ button { cursor: pointer; font-family: inherit; }
   color: #f0db4f;
   letter-spacing: -1px;
   text-shadow: 2px 2px 0px #6b5d00;
-  background: #3a3000;
-  border: 2px solid #c9b400;
-  border-radius: 6px;
-  padding: 0px 10px 2px;
   line-height: 1.3;
 }
 
@@ -273,12 +284,37 @@ button { cursor: pointer; font-family: inherit; }
 .section-more:hover { color: rgba(255,255,255,0.7); }
 
 /* ── Cards Row ──────────────────────────────────────── */
+.cards-row-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .cards-row {
   display: flex; gap: 12px;
-  overflow-x: auto; padding-bottom: 4px;
+  overflow-x: auto; padding: 0 48px 4px;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 .cards-row::-webkit-scrollbar { display: none; }
+
+.scroll-button {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 34px; height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+}
+.scroll-button:hover { background: rgba(255,255,255,0.18); transform: translateY(-50%) scale(1.05); }
+.scroll-button.left { left: -13px; }
+.scroll-button.right { right: -13px; }
 
 .skill-grid { flex-wrap: wrap; overflow: visible; }
 
@@ -321,17 +357,17 @@ button { cursor: pointer; font-family: inherit; }
 .card-sub { font-size: 11px; color: rgba(255,255,255,0.38); }
 
 /* Card size variants */
-.card-continue { width: 200px; }
-.continue-thumb { height: 115px; position: relative; }
+.card-continue { width: 220px; }
+.continue-thumb { height: 130px; position: relative; }
 
-.card-wide { width: 200px; }
-.wide-thumb { height: 120px; }
+.card-wide { width: 220px; }
+.wide-thumb { height: 140px; }
 
-.card-tall { width: 140px; }
-.tall-thumb { height: 190px; }
+.card-tall { width: 150px; }
+.tall-thumb { height: 205px; }
 
-.card-sq { width: 120px; }
-.sq-thumb { height: 90px; }
+.card-sq { width: 130px; }
+.sq-thumb { height: 100px; }
 
 /* ── Play circle ────────────────────────────────────── */
 .play-circle {
