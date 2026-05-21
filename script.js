@@ -88,29 +88,59 @@ const portfolioData = {
   ],
 
   juniorProjects: [
-    {
-      title: "The Search For The Forgotten Crown",
+     {
+      title: "Summertainment Travels",
       sub: "Adventure web design · 2023",
-      link: "#",
-      image: "imgs/TheSearchForTheForgottenCrown_J.png"
+      link: "https://yasminan1.github.io/Summer-tainment-site/index.html",
+      image: "imgs/Summertainment_J.png"
     },
     {
       title: "Thomas Edison Interactive",
       sub: "Historical animation · 2023",
-      link: "#",
+      link: "https://yasminan1.github.io/OctWebsite/",
       image: "imgs/ThomasEdison_J.png"
+    },
+    {
+      title: "Ghost Animation",
+      sub: "Historical animation · 2023",
+      link: "https://yasminan1.github.io/SpookyTca1/ ",
+      image: "imgs/Ghost_J.png"
+    },
+    {
+      title: "Pumpkin Animation",
+      sub: "Historical animation · 2023",
+      link: "https://yasminan1.github.io/PumpkinTca1/",
+      image: "imgs/Minnie_J.png"
+    },
+    {
+      title: "The Search For The Forgotten Crown",
+      sub: "Adventure web design · 2023",
+      link: "https://yasminan1.github.io/NovWebsite/",
+      image: "imgs/TheSearchForTheForgottenCrown_J.png"
     },
     {
       title: "8Ball Game",
       sub: "Interactive game · 2023",
-      link: "#",
+      link: "https://yasminan1.github.io/MagicEightBall/",
       image: "imgs/8Ball_J.png"
     },
     {
       title: "Bridgerton Name Generator",
       sub: "Creative UI · 2023",
-      link: "#",
+      link: "https://yasminan1.github.io/DecWebsite/",
       image: "imgs/BridgertonName_J.png"
+    },
+    {
+      title: "Monthly Gallery",
+      sub: "Creative UI · 2023",
+      link: "https://yasminan1.github.io/MonthlyWebsiteGallery/",
+      image: "imgs/MonthlyWebsites_J.png"
+    },
+    {
+      title: "Rock Paper Scissors",
+      sub: "Creative UI · 2023",
+      link: "https://yasminan1.github.io/JanWebsite/",
+      image: "imgs/RPS_J.png"
     },
     {
       title: "Little Bird Toy Co.",
@@ -146,37 +176,37 @@ const portfolioData = {
 
   sophomoreProjects: [
     {
-      title: "Sophomore project 1",
+      title: "Coral Cove Cafe",
       sub: "Illustration · 2022",
-      link: "#",
+      link: "https://f8258f4b-977e-4c6f-b866-3f81513990e0-00-39f7bz2ym8y8a.janeway.repl.co/",
       image: "imgs/CoralCove_S.png",
       icon: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>`
     },
     {
-      title: "Sophomore project 2",
+      title: "Farmer's Market",
       sub: "Branding · 2022",
-      link: "#",
+      link: "https://940b8c34-5183-4f4e-90cf-e4c6d0af6b8e-00-nylhb5qh578q.janeway.repl.co/",
       image: "imgs/FarmerMarket_S.png",
       icon: `<path d="M12 2l4 7H8l4-7z"/><path d="M5 9h14v11H5z"/>`
     },
     {
-      title: "Sophomore project 3",
+      title: "Memorial Sloan Kettering Cancer Center",
       sub: "Motion design · 2022",
-      link: "#",
+      link: "https://48a7ae20-75c0-4792-8f1f-f0cdf09cbec6-00-3ovnz46po2q2.worf.replit.dev/",
       image: "imgs/MemorialSloan_S.png",
       icon: `<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>`
     },
     {
-      title: "Sophomore project 4",
+      title: "Vacation in Santorini",
       sub: "Visual systems · 2022",
-      link: "#",
+      link: "https://71ca19e0-aff7-47bf-b54c-a99562ef70a9-00-1m38iwofyuc49.picard.repl.co/",
       image: "imgs/Santorini_S.png",
       icon: `<rect x="4" y="4" width="16" height="16" rx="3"/><line x1="4" y1="12" x2="20" y2="12"/>`
     },
     {
-      title: "Sophomore project 5",
+      title: "Tabayer Jewelry",
       sub: "Campaign launch · 2022",
-      link: "#",
+      link: "https://8509c2f4-3a17-4afb-bdb3-56c276d46ea6-00-kvie6fve7bs4.worf.replit.dev/",
       image: "imgs/Tabayer_S.png",
       icon: `<path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="5"/>`
     }
