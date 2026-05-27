@@ -46,43 +46,61 @@ const portfolioData = {
     {
       title: "College Recruitment",
       sub: "Senior showcase · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/College-Recruitment/",
       image: "imgs/CollegeRecruitment_Sr.png"
+    },
+    {
+      title: "JS Functions Demo",
+      sub: "Social design · 2024",
+      link: "https://yasminan1.github.io/1.01-Functions-Refresher/",
+      image: "imgs/FunctionsDemo_S.png"
+    },
+    {
+      title: "Arrays & Loops Demo",
+      sub: "Social design · 2024",
+      link: "https://yasminan1.github.io/Array-Loop-Refresher/",
+      image: "imgs/ArrayLoopsRefresher_S.png"
+    },
+    {
+      title: "Event Listener Demo",
+      sub: "Social design · 2024",
+      link: "https://yasminan1.github.io/Event-Listeners-Refresher//",
+      image: "imgs/EventListenerDemo_S.png"
     },
     {
       title: "Cards With Friends",
       sub: "Social design · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/Cards-with-Friends/",
       image: "imgs/CardsWithFriends_Sr.png"
     },
     {
       title: "Class Schedules",
       sub: "Planner interface · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/Class-Schedule-Project/",
       image: "imgs/ClassSchedules_Sr.png"
     },
     {
       title: "Album Gallery",
       sub: "Photo album UI · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/SlideshowProject/",
       image: "imgs/AlbumGallery_Sr.png"
     },
     {
       title: "Retro Cinema Collection",
       sub: "Film archive · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/Movie-Posters/",
       image: "imgs/RetroCinemaCollection_Sr.png"
     },
     {
       title: "Christmas Buzzfeed Quiz",
       sub: "Holiday campaign · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/BuzzfeedChristmas/",
       image: "imgs/ChristmasBuzzfeedQuiz_Sr.png"
     },
     {
       title: "KC Nail Art",
       sub: "Beauty branding · 2024",
-      link: "#",
+      link: "https://yasminan1.github.io/KC-Nail-Art/",
       image: "imgs/KCNailArt_Sr.png"
     }
   ],
@@ -143,35 +161,47 @@ const portfolioData = {
       image: "imgs/RPS_J.png"
     },
     {
-      title: "Little Bird Toy Co.",
-      sub: "Brand design · 2023",
-      link: "#",
-      image: "imgs/LittleBirdToyCo_J.png"
-    },
-    {
-      title: "Moana Hangman",
-      sub: "Game design · 2023",
-      link: "#",
-      image: "imgs/MoanaHangman_J.png"
-    },
-    {
       title: "Postcard Generator",
       sub: "Front-end tool · 2023",
-      link: "#",
+      link: "https://yasminan1.github.io/PostcardGenerator/",
       image: "imgs/PostcardGenerator_J.png"
     },
     {
-      title: "Rangers Team Roster",
-      sub: "Roster app · 2023",
-      link: "#",
-      image: "imgs/RangersTeamRoster_J.png"
+      title: "James K. Polk History",
+      sub: "Front-end tool · 2023",
+      link: "https://yasminan1.github.io/Febwebsite/",
+      image: "imgs/JamesKPolk_J.png"
+    },
+    {
+      title: "To-Do List",
+      sub: "Front-end tool · 2023",
+      link: "https://yasminan1.github.io/ToDoList/",
+      image: "imgs/ToDoList_J.png"
+    },
+     {
+      title: "Moana Hangman",
+      sub: "Game design · 2023",
+      link: "https://yasminan1.github.io/MarchWebsite/",
+      image: "imgs/MoanaHangman_J.png"
     },
     {
       title: "The Storm Court Story",
       sub: "Story-driven UI · 2023",
-      link: "#",
+      link: "https://yasminan1.github.io/AprilWebsite/",
       image: "imgs/TheStormCourtStory_J.png"
-    }
+    },
+     {
+      title: "Rangers Team Roster",
+      sub: "Roster app · 2023",
+      link: "https://yasminan1.github.io/MayWebsite/",
+      image: "imgs/RangersTeamRoster_J.png"
+    },
+    {
+      title: "Little Bird Toy Co.",
+      sub: "Brand design · 2023",
+      link: "https://yasminan1.github.io/JuneWebsite/",
+      image: "imgs/LittleBirdToyCo_J.png"
+    },
   ],
 
   sophomoreProjects: [
@@ -214,17 +244,17 @@ const portfolioData = {
 
   // Skills grid — square cards
   skills: [
-    { label: "Student Council Vice President (3 Years)", icon: `<polygon points="12 2 14 8 20 8 15 12 17 18 12 14 7 18 9 12 4 8 10 8 12 2"/>` },
-    { label: "Executive Board Vice President (Senior Year)", icon: `<rect x="4" y="4" width="16" height="12" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/>` },
-    { label: "Founder & Vice President, Slavic Society Club", icon: `<circle cx="12" cy="8" r="3"/><rect x="6" y="12" width="12" height="6" rx="2"/>` },
-    { label: "Anytown: Leaders of Diversity", icon: `<path d="M12 2v6"/><circle cx="12" cy="14" r="6"/>` },
-    { label: "Web Design Pathway Advisory Board Member", icon: `<rect x="3" y="6" width="18" height="12" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/>` },
-    { label: "National Honor Society Member", icon: `<polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/>` },
-    { label: "Italian Honor Society Member", icon: `<path d="M4 6h16v12H4z"/><line x1="4" y1="12" x2="20" y2="12"/>` },
+    { label: "Student Council Vice President (3 Years)", icon: `<path d="M12 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-5 9c0-2 2-3 5-3s5 1 5 3v1H7v-1z"/>` },
+    { label: "Executive Board Vice President (Senior Year)", icon: `<path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>` },
+    { label: "Founder & Vice President, Slavic Society Club", icon: `<path d="M12 2a10 10 0 0 0-8 14.9L12 22l8-5.1A10 10 0 0 0 12 2zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 11.5a6.5 6.5 0 0 1-5.5-3h11a6.5 6.5 0 0 1-5.5 3z"/>` },
+    { label: "Anytown: Leaders of Diversity", icon: `<path d="M8 8a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm8 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-8 8c0-2 2-3 4-3s4 1 4 3v1H8v-1z"/>` },
+    { label: "Web Design Pathway Advisory Board Member", icon: `<rect x="4" y="5" width="16" height="10" rx="2"/><line x1="8" y1="19" x2="16" y2="19"/><line x1="10" y1="5" x2="10" y2="15"/><line x1="14" y1="5" x2="14" y2="15"/>` },
+    { label: "National Honor Society Member", icon: `<path d="M4 10l8-5 8 5-8 5-8-5zm0 2.5v3.5h16v-3.5"/>` },
+    { label: "Italian Honor Society Member", icon: `<path d="M12 3l2.09 6.26L20 10l-5 3.64L16.18 20 12 16.9 7.82 20 9 13.64 4 10l5.91-.74L12 3z"/>` },
     { label: "Camp & Daycare Staff Member (Genius Kids Academy)", icon: `<circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><path d="M4 18c2-3 6-4 8-4s6 1 8 4"/>` },
-    { label: "Pianist — Carnegie Hall Performer", icon: `<path d="M3 7h18v4a6 6 0 0 1-6 6H9"/><circle cx="6" cy="10" r="1"/>` },
-    { label: "Dancer — 12 Years", icon: `<path d="M12 2c2 4 5 6 8 8-3 2-6 4-8 10-2-6-5-8-8-10 3-2 6-4 8-8z"/>` },
-    { label: "Swim Team Manager", icon: `<path d="M2 12c4-4 8-4 12 0s8 4 12 0"/><path d="M2 16c4-4 8-4 12 0s8 4 12 0"/>` }
+    { label: "Pianist — Carnegie Hall Performer", icon: `<rect x="4" y="8" width="16" height="8" rx="1"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="10" y1="8" x2="10" y2="16"/><line x1="13" y1="8" x2="13" y2="16"/><line x1="16" y1="8" x2="16" y2="16"/>` },
+    { label: "Dancer — 12 Years", icon: `<path d="M12 3c-2 2-3 5-3 8 0 3 1 6 3 8 2-2 3-5 3-8 0-3-1-6-3-8zm0 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>` },
+    { label: "Swim Team Manager", icon: `<path d="M2 14c4-4 8-4 12 0s8 4 12 0"/><path d="M2 18c4-4 8-4 12 0s8 4 12 0"/>` }
   ],
 
   // Most recent work — tall portrait cards
@@ -261,9 +291,12 @@ createApp({
   data() {
     return {
       continueItems:    portfolioData.continueItems,
-      seniorProjects:  portfolioData.seniorProjects,
-      juniorProjects:  portfolioData.juniorProjects,
+      seniorProjects:   portfolioData.seniorProjects,
+      juniorProjects:   portfolioData.juniorProjects,
       sophomoreProjects: portfolioData.sophomoreProjects,
+      seniorExpanded:   false,
+      juniorExpanded:   false,
+      sophomoreExpanded:false,
       skills:           portfolioData.skills,
       latestWork:       portfolioData.latestWork
     };
@@ -274,6 +307,16 @@ createApp({
       if (!row) return;
       const distance = direction === 'left' ? -260 : 260;
       row.scrollBy({ left: distance, behavior: 'smooth' });
+    },
+    toggleExpanded(section) {
+      const stateName = section + 'Expanded';
+      this[stateName] = !this[stateName];
+      if (!this[stateName]) {
+        this.$nextTick(() => {
+          const row = this.$refs[section + 'Row'];
+          if (row) row.scrollLeft = 0;
+        });
+      }
     }
   }
 }).mount('#app');

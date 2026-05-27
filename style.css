@@ -295,6 +295,18 @@ button { cursor: pointer; font-family: inherit; }
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
+.cards-row.expanded {
+  flex-wrap: wrap;
+  overflow-x: visible;
+  padding: 0;
+  justify-content: flex-start;
+}
+.cards-row.expanded .card-wide {
+  margin-bottom: 12px;
+}
+.cards-row-wrapper.expanded {
+  overflow: visible;
+}
 .cards-row::-webkit-scrollbar { display: none; }
 
 .scroll-button {

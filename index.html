@@ -121,13 +121,13 @@
   <section class="section">
     <div class="section-header">
       <span class="section-title">Senior Year</span>
-      <span class="section-more">Browse all</span>
+      <span class="section-more" @click="toggleExpanded('senior')">{{ seniorExpanded ? 'Show less' : 'Browse all' }}</span>
     </div>
-    <div class="cards-row-wrapper">
-      <button class="scroll-button left" @click="scrollRow('left','seniorRow')" aria-label="Scroll senior row left">
+    <div class="cards-row-wrapper" :class="{ expanded: seniorExpanded }">
+      <button class="scroll-button left" v-show="!seniorExpanded" @click="scrollRow('left','seniorRow')" aria-label="Scroll senior row left">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <div class="cards-row senior-row" ref="seniorRow">
+      <div class="cards-row senior-row" :class="{ expanded: seniorExpanded }" ref="seniorRow">
         <div class="card card-wide" v-for="p in seniorProjects" :key="p.title">
           <div class="card-thumb wide-thumb project-thumb">
             <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
@@ -141,7 +141,7 @@
           </div>
         </div>
       </div>
-      <button class="scroll-button right" @click="scrollRow('right','seniorRow')" aria-label="Scroll senior row right">
+      <button class="scroll-button right" v-show="!seniorExpanded" @click="scrollRow('right','seniorRow')" aria-label="Scroll senior row right">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
@@ -151,13 +151,13 @@
   <section class="section">
     <div class="section-header">
       <span class="section-title">Junior Year</span>
-      <span class="section-more">Browse all</span>
+      <span class="section-more" @click="toggleExpanded('junior')">{{ juniorExpanded ? 'Show less' : 'Browse all' }}</span>
     </div>
-    <div class="cards-row-wrapper">
-      <button class="scroll-button left" @click="scrollRow('left','juniorRow')" aria-label="Scroll junior row left">
+    <div class="cards-row-wrapper" :class="{ expanded: juniorExpanded }">
+      <button class="scroll-button left" v-show="!juniorExpanded" @click="scrollRow('left','juniorRow')" aria-label="Scroll junior row left">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <div class="cards-row junior-row" ref="juniorRow">
+      <div class="cards-row junior-row" :class="{ expanded: juniorExpanded }" ref="juniorRow">
         <div class="card card-wide" v-for="p in juniorProjects" :key="p.title">
           <div class="card-thumb wide-thumb project-thumb">
             <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
@@ -171,7 +171,7 @@
           </div>
         </div>
       </div>
-      <button class="scroll-button right" @click="scrollRow('right','juniorRow')" aria-label="Scroll junior row right">
+      <button class="scroll-button right" v-show="!juniorExpanded" @click="scrollRow('right','juniorRow')" aria-label="Scroll junior row right">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
@@ -181,21 +181,29 @@
   <section class="section">
     <div class="section-header">
       <span class="section-title">Sophomore Year</span>
-      <span class="section-more">Browse all</span>
+      <span class="section-more" @click="toggleExpanded('sophomore')">{{ sophomoreExpanded ? 'Show less' : 'Browse all' }}</span>
     </div>
-    <div class="cards-row">
-      <div class="card card-wide" v-for="p in sophomoreProjects" :key="p.title">
-        <div class="card-thumb wide-thumb project-thumb">
-          <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
-          <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </a>
-        </div>
-        <div class="card-body">
-          <p class="card-title">{{ p.title }}</p>
-          <p class="card-sub">{{ p.sub }}</p>
+    <div class="cards-row-wrapper" :class="{ expanded: sophomoreExpanded }">
+      <button class="scroll-button left" v-show="!sophomoreExpanded" @click="scrollRow('left','sophomoreRow')" aria-label="Scroll sophomore row left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="cards-row sophomore-row" :class="{ expanded: sophomoreExpanded }" ref="sophomoreRow">
+        <div class="card card-wide" v-for="p in sophomoreProjects" :key="p.title">
+          <div class="card-thumb wide-thumb project-thumb">
+            <div class="project-image" :style="{ backgroundImage: p.image ? 'url(' + p.image + ')' : 'none' }"></div>
+            <a class="play-circle project-play" :href="p.link || '#'" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-title">{{ p.title }}</p>
+            <p class="card-sub">{{ p.sub }}</p>
+          </div>
         </div>
       </div>
+      <button class="scroll-button right" v-show="!sophomoreExpanded" @click="scrollRow('right','sophomoreRow')" aria-label="Scroll sophomore row right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
     </div>
   </section>
 
