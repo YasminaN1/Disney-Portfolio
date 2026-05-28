@@ -244,17 +244,17 @@ const portfolioData = {
 
   // Skills grid — square cards
   skills: [
-    { label: "Student Council Vice President (3 Years)", icon: `<path d="M12 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-5 9c0-2 2-3 5-3s5 1 5 3v1H7v-1z"/>` },
-    { label: "Executive Board Vice President (Senior Year)", icon: `<path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>` },
-    { label: "Founder & Vice President, Slavic Society Club", icon: `<path d="M12 2a10 10 0 0 0-8 14.9L12 22l8-5.1A10 10 0 0 0 12 2zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 11.5a6.5 6.5 0 0 1-5.5-3h11a6.5 6.5 0 0 1-5.5 3z"/>` },
-    { label: "Anytown: Leaders of Diversity", icon: `<path d="M8 8a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm8 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-8 8c0-2 2-3 4-3s4 1 4 3v1H8v-1z"/>` },
-    { label: "Web Design Pathway Advisory Board Member", icon: `<rect x="4" y="5" width="16" height="10" rx="2"/><line x1="8" y1="19" x2="16" y2="19"/><line x1="10" y1="5" x2="10" y2="15"/><line x1="14" y1="5" x2="14" y2="15"/>` },
-    { label: "National Honor Society Member", icon: `<path d="M4 10l8-5 8 5-8 5-8-5zm0 2.5v3.5h16v-3.5"/>` },
-    { label: "Italian Honor Society Member", icon: `<path d="M12 3l2.09 6.26L20 10l-5 3.64L16.18 20 12 16.9 7.82 20 9 13.64 4 10l5.91-.74L12 3z"/>` },
-    { label: "Camp & Daycare Staff Member (Genius Kids Academy)", icon: `<circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><path d="M4 18c2-3 6-4 8-4s6 1 8 4"/>` },
-    { label: "Pianist — Carnegie Hall Performer", icon: `<rect x="4" y="8" width="16" height="8" rx="1"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="10" y1="8" x2="10" y2="16"/><line x1="13" y1="8" x2="13" y2="16"/><line x1="16" y1="8" x2="16" y2="16"/>` },
-    { label: "Dancer — 12 Years", icon: `<path d="M12 3c-2 2-3 5-3 8 0 3 1 6 3 8 2-2 3-5 3-8 0-3-1-6-3-8zm0 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>` },
-    { label: "Swim Team Manager", icon: `<path d="M2 14c4-4 8-4 12 0s8 4 12 0"/><path d="M2 18c4-4 8-4 12 0s8 4 12 0"/>` }
+    { label: "Student Council Vice President (3 Years)", image: "imgs/Stuco3Yrs.png" },
+    { label: "Executive Board Vice President (Senior Year)", icon: `<path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>`, image: "imgs/ExeBoard.png" },
+    { label: "Founder & Vice President, Slavic Society Club", icon: `<path d="M12 2a10 10 0 0 0-8 14.9L12 22l8-5.1A10 10 0 0 0 12 2zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 11.5a6.5 6.5 0 0 1-5.5-3h11a6.5 6.5 0 0 1-5.5 3z"/>`, image: "imgs/SlavicSociety.png" },
+    { label: "Anytown: Leaders of Diversity", icon: `<path d="M8 8a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm8 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-8 8c0-2 2-3 4-3s4 1 4 3v1H8v-1z"/>`, image: "imgs/Anytown.png" },
+    { label: "Web Design Pathway Advisory Board Member", icon: `<rect x="4" y="5" width="16" height="10" rx="2"/><line x1="8" y1="19" x2="16" y2="19"/><line x1="10" y1="5" x2="10" y2="15"/><line x1="14" y1="5" x2="14" y2="15"/>`, image: "imgs/Webby.png" },
+    { label: "National Honor Society Member", icon: `<path d="M4 10l8-5 8 5-8 5-8-5zm0 2.5v3.5h16v-3.5"/>`, image: "imgs/NHS.png" },
+    { label: "Italian Honor Society Member", icon: `<path d="M12 3l2.09 6.26L20 10l-5 3.64L16.18 20 12 16.9 7.82 20 9 13.64 4 10l5.91-.74L12 3z"/>`, image: "imgs/ItalianNHS.png" },
+    { label: "Camp & Daycare Staff Member (Genius Kids Academy)", icon: `<circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><path d="M4 18c2-3 6-4 8-4s6 1 8 4"/>`, image: "imgs/GeniusKids.png" },
+    { label: "Pianist — Carnegie Hall Performer", icon: `<rect x="4" y="8" width="16" height="8" rx="1"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="10" y1="8" x2="10" y2="16"/><line x1="13" y1="8" x2="13" y2="16"/><line x1="16" y1="8" x2="16" y2="16"/>`, image: "imgs/Piano.png" },
+    { label: "Dancer — 12 Years", icon: `<path d="M12 3c-2 2-3 5-3 8 0 3 1 6 3 8 2-2 3-5 3-8 0-3-1-6-3-8zm0 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>`, image: "imgs/Dancer.png" },
+    { label: "Swim Team Manager", icon: `<path d="M2 14c4-4 8-4 12 0s8 4 12 0"/><path d="M2 18c4-4 8-4 12 0s8 4 12 0"/>`, image: "imgs/SwimTeam.png" }
   ],
 
   // Most recent work — tall portrait cards
@@ -298,7 +298,14 @@ createApp({
       juniorExpanded:   false,
       sophomoreExpanded:false,
       skills:           portfolioData.skills,
-      latestWork:       portfolioData.latestWork
+      skillLevels: [
+        { name: "Vue", level: 85 },
+        { name: "JavaScript", level: 90 },
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 85 },
+        { name: "JSON", level: 80 },
+        { name: "jQuery", level: 75 }
+      ]
     };
   },
   methods: {
