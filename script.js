@@ -26,18 +26,102 @@ const portfolioData = {
   // Projects currently in progress — shown in "Continue" row
   continueItems: [
     {
-      title: "Ongoing project",
-      sub: "In progress · 70% complete",
+      title: "Shaili's Spotify",
+      sub: " 70% complete",
       progress: 70,
       link: "#",
       image: ""
     },
     {
-      title: "Side project name",
-      sub: "Case study · 45% complete",
-      progress: 45,
-      link: "#",
-      image: ""
+      title: "Aly's Netflix",
+      sub: "49% complete",
+      progress: 49,
+      link: "https://526aschwartz.github.io/senior-port/",
+      image: "imgs/AlyNetflix.png"
+    }
+  ],
+
+  featuredProjects: [
+    {
+      title: "UNC Chapel Hill",
+      sub: "Senior showcase · 2024",
+      description: "A polished senior project highlighting brand design and interactive detail.",
+      link: "https://yasminan1.github.io/College-Recruitment/",
+      detailsPage: "capel-hill.html",
+      image: "imgs/CollegeRecruitment_Sr.png",
+      year: "Senior Year"
+    },
+    {
+      title: "KC Nail Art",
+      sub: "Senior branding · 2024",
+      description: "Beauty branding with a rich visual identity and immersive interface.",
+      link: "https://yasminan1.github.io/KC-Nail-Art/",
+      detailsPage: "kc-nail-art.html",
+      image: "imgs/KCNailArt_Sr.png",
+      year: "Senior Year"
+    },
+    {
+      title: "Christmas Buzzfeed Quiz",
+      sub: "Senior campaign · 2024",
+      description: "A festive interactive quiz experience built for holiday engagement.",
+      link: "https://yasminan1.github.io/BuzzfeedChristmas/",
+      detailsPage: "christmas-buzzfeed-quiz.html",
+      image: "imgs/ChristmasBuzzfeedQuiz_Sr.png",
+      year: "Senior Year"
+    },
+    {
+      title: "The Search For The Forgotten Crown",
+      sub: "Junior adventure UI · 2023",
+      description: "A storytelling-driven interface that guides users through an immersive journey.",
+      link: "https://yasminan1.github.io/NovWebsite/",
+      detailsPage: "search-for-the-forgotten-crown.html",
+      image: "imgs/TheSearchForTheForgottenCrown_J.png",
+      year: "Junior Year"
+    },
+    {
+      title: "Little Bird Toy Co.",
+      sub: "Junior brand design · 2023",
+      description: "A playful retail concept with bright visuals and engaging product displays.",
+      link: "https://yasminan1.github.io/LittleBirdToyCo_J/",
+      detailsPage: "little-bird-toy-co.html",
+      image: "imgs/LittleBirdToyCo_J.png",
+      year: "Junior Year"
+    },
+    {
+      title: "Rangers Team Roster",
+      sub: "Junior roster app · 2023",
+      description: "A team roster interface with clean structure and easy navigation.",
+      link: "https://yasminan1.github.io/MayWebsite/",
+      detailsPage: "rangers-team-roster.html",
+      image: "imgs/RangersTeamRoster_J.png",
+      year: "Junior Year"
+    },
+    {
+      title: "Vacation in Santorini",
+      sub: "Sophomore visual systems · 2022",
+      description: "A scenic concept that pairs elegant visuals with polished layout design.",
+      link: "https://71ca19e0-aff7-47bf-b54c-a99562ef70a9-00-1m38iwofyuc49.picard.repl.co/",
+      detailsPage: "santorini.html",
+      image: "imgs/Santorini_S.png",
+      year: "Sophomore Year"
+    },
+    {
+      title: "Tabayer",
+      sub: "Sophomore campaign · 2022",
+      description: "A luxury campaign project with bold typography and refined branding.",
+      link: "https://8509c2f4-3a17-4afb-bdb3-56c276d46ea6-00-kvie6fve7bs4.worf.replit.dev/",
+      detailsPage: "tabayer.html",
+      image: "imgs/Tabayer_S.png",
+      year: "Sophomore Year"
+    },
+    {
+      title: "Coral Cove",
+      sub: "Sophomore illustration · 2022",
+      description: "A colorful illustration piece focused on seaside storytelling.",
+      link: "https://f8258f4b-977e-4c6f-b866-3f81513990e0-00-39f7bz2ym8y8a.janeway.repl.co/",
+      detailsPage: "coral-cove.html",
+      image: "imgs/CoralCove_S.png",
+      year: "Sophomore Year"
     }
   ],
 
@@ -290,6 +374,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      featuredIndex: 0,
       continueItems:    portfolioData.continueItems,
       seniorProjects:   portfolioData.seniorProjects,
       juniorProjects:   portfolioData.juniorProjects,
@@ -308,7 +393,20 @@ createApp({
       ]
     };
   },
+  computed: {
+    featuredProject() {
+      return this.featuredProjects[this.featuredIndex] || this.featuredProjects[0];
+    }
+  },
   methods: {
+    prevFeatured() {
+      this.featuredIndex = this.featuredIndex > 0
+        ? this.featuredIndex - 1
+        : this.featuredProjects.length - 1;
+    },
+    nextFeatured() {
+      this.featuredIndex = (this.featuredIndex + 1) % this.featuredProjects.length;
+    },
     scrollRow(direction, refName) {
       const row = this.$refs[refName];
       if (!row) return;

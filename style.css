@@ -91,7 +91,7 @@ button { cursor: pointer; font-family: inherit; }
 .hero {
   position: relative;
   background: #0d1f3a;
-  height: 320px;
+  height: 380px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -120,20 +120,22 @@ button { cursor: pointer; font-family: inherit; }
   display: flex; align-items: center; justify-content: center;
 }
 
-.hero-screenshot-box {
-  width: 80%; height: 75%;
-  background: rgba(255,255,255,0.05);
-  border-radius: 8px;
-  border: 0.5px solid rgba(255,255,255,0.08);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 8px;
+.hero-screenshot-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  background: linear-gradient(to right, rgba(13,31,58,0.85), transparent);
+  pointer-events: none;
 }
 
 .screenshot-label { font-size: 11px; color: rgba(255,255,255,0.2); }
 
 .hero-content {
   position: relative; z-index: 2;
-  padding: 28px; width: 50%;
+  padding: 32px; width: 50%;
 }
 
 .hero-eyebrow {
@@ -160,6 +162,7 @@ button { cursor: pointer; font-family: inherit; }
   padding: 9px 20px; font-size: 13px; font-weight: 700;
   display: flex; align-items: center; gap: 6px;
   transition: background 0.2s;
+  text-decoration: none;
 }
 .btn-play:hover { background: #79c8ff; }
 
@@ -171,6 +174,166 @@ button { cursor: pointer; font-family: inherit; }
 }
 .btn-info:hover { background: rgba(255,255,255,0.22); }
 
+.hero-screenshot-box {
+  width: 98%; height: 88%;
+  background: rgba(255,255,255,0.06);
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  border: 0.5px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.hero-screenshot-placeholder {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.25);
+}
+
+.hero-carousel-nav {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 12px;
+}
+
+.hero-carousel-counter {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+}
+
+.carousel-nav-button {
+  width: 32px; height: 32px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.carousel-nav-button:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Position carousel side arrows similar to row arrows, keep counter centered */
+.carousel-nav-button.side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(79,179,255,0.35);
+  background: rgba(79,179,255,0.18);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.carousel-nav-button.side.left { left: 12px; }
+.carousel-nav-button.side.right { right: 12px; }
+
+/* Remove underline for learn-more anchor buttons */
+.btn-info, a.btn-info { text-decoration: none; }
+
+/* Expanded cards grid for "Browse all" when a wrapper has .expanded */
+.cards-row-wrapper.expanded .cards-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  overflow: visible;
+  padding: 0 28px 12px;
+}
+.cards-row-wrapper.expanded .card {
+  width: auto !important;
+  max-width: none;
+}
+.cards-row-wrapper.expanded .card .card-thumb { height: 180px; }
+
+/* Responsive fallback for smaller screens */
+@media (max-width: 1100px) {
+  .cards-row-wrapper.expanded .cards-row { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .cards-row-wrapper.expanded .cards-row { grid-template-columns: repeat(1, 1fr); }
+}
+
+.project-page {
+  padding: 32px 28px 48px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.project-detail {
+  display: grid;
+  gap: 28px;
+}
+
+.project-detail-banner {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0.5px solid rgba(255,255,255,0.08);
+}
+
+.project-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.project-detail-meta span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+
+.project-detail-heading {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0;
+}
+
+.detail-section {
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.detail-section h2 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.detail-section p,
+.detail-section ul {
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+}
+
+.detail-section ul {
+  padding-left: 18px;
+}
+
+.detail-section li {
+  margin-bottom: 8px;
+}
+
+.project-page .btn-play {
+  margin-top: 18px;
+}
+
+.project-page a.btn-play,
+.project-page a.btn-info {
+  text-decoration: none;
+}
 
 /* ══════════════════════════════════════════════════════
    TECH BRAND STRIP  — each logo has its own identity
@@ -286,7 +449,28 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Cards Row ──────────────────────────────────────── */
 .cards-row-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.cards-row-wrapper.scroll-mask::before,
+.cards-row-wrapper.scroll-mask::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cards-row-wrapper.scroll-mask::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(10,22,40,0.94), transparent);
+}
+
+.cards-row-wrapper.scroll-mask::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(10,22,40,0.94), transparent);
 }
 
 .cards-row {
@@ -309,24 +493,39 @@ button { cursor: pointer; font-family: inherit; }
 }
 .cards-row::-webkit-scrollbar { display: none; }
 
+.senior-row,
+.junior-row {
+  padding-right: 220px;
+}
+
+.senior-row .card,
+.junior-row .card {
+  width: 250px;
+}
+
+.senior-row .wide-thumb,
+.junior-row .wide-thumb {
+  height: 160px;
+}
+
 .scroll-button {
   position: absolute;
   top: 50%; transform: translateY(-50%);
   width: 34px; height: 34px;
-  border: none;
+  border: 1px solid rgba(79,179,255,0.35);
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
+  background: rgba(79,179,255,0.18);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-  z-index: 2;
+  z-index: 3;
 }
-.scroll-button:hover { background: rgba(255,255,255,0.18); transform: translateY(-50%) scale(1.05); }
-.scroll-button.left { left: -13px; }
-.scroll-button.right { right: -13px; }
+.scroll-button:hover { background: rgba(79,179,255,0.28); transform: translateY(-50%) scale(1.05); }
+.scroll-button.left { left: -8px; }
+.scroll-button.right { right: -8px; }
 
 .skill-grid { flex-wrap: wrap; overflow: visible; }
 
@@ -369,11 +568,11 @@ button { cursor: pointer; font-family: inherit; }
 .card-sub { font-size: 11px; color: rgba(255,255,255,0.38); }
 
 /* Card size variants */
-.card-continue { width: 220px; }
-.continue-thumb { height: 130px; position: relative; }
+.card-continue { width: 250px; }
+.continue-thumb { height: 160px; position: relative; }
 
-.card-wide { width: 220px; }
-.wide-thumb { height: 140px; }
+.card-wide { width: 250px; }
+.wide-thumb { height: 160px; }
 
 .card-tall { width: 150px; }
 .tall-thumb { height: 205px; }
@@ -384,12 +583,12 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Play circle ────────────────────────────────────── */
 .play-circle {
   width: 38px; height: 38px; border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255,255,255,0.22);
   display: flex; align-items: center; justify-content: center;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
-.play-circle:hover { background: rgba(255,255,255,0.25); }
+.play-circle:hover { background: rgba(0, 0, 0, 0.72); transform: scale(1.05); }
 
 /* ── Progress bar ───────────────────────────────────── */
 .prog-track {
