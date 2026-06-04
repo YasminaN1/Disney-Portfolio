@@ -4,7 +4,7 @@
 body {
   background: #0a1628;
   color: #fff;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Trebuchet MS', sans-serif;
   min-height: 100vh;
   overflow: hidden; /* For splash screen */
 }
@@ -131,11 +131,23 @@ button { cursor: pointer; font-family: inherit; }
   pointer-events: none;
 }
 
+.hero-screenshot-area::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(to left, rgba(10,22,40,0.72), transparent);
+  pointer-events: none;
+}
+
 .screenshot-label { font-size: 11px; color: rgba(255,255,255,0.2); }
 
 .hero-content {
   position: relative; z-index: 2;
-  padding: 32px; width: 50%;
+  width: 42%; margin-left: 18px;
+  padding: 32px 32px 32px 48px;
 }
 
 .hero-eyebrow {
@@ -452,30 +464,10 @@ button { cursor: pointer; font-family: inherit; }
   overflow: visible;
 }
 
-.cards-row-wrapper.scroll-mask::before,
-.cards-row-wrapper.scroll-mask::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.cards-row-wrapper.scroll-mask::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(10,22,40,0.94), transparent);
-}
-
-.cards-row-wrapper.scroll-mask::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(10,22,40,0.94), transparent);
-}
 
 .cards-row {
-  display: flex; gap: 12px;
-  overflow-x: auto; padding: 0 48px 4px;
+  display: flex; gap: 14px;
+  overflow-x: auto; padding: 0 40px 4px;
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
@@ -493,24 +485,47 @@ button { cursor: pointer; font-family: inherit; }
 }
 .cards-row::-webkit-scrollbar { display: none; }
 
+.cards-row-wrapper.scroll-mask::before,
+.cards-row-wrapper.scroll-mask::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cards-row-wrapper.scroll-mask::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(10,22,40,0.96), transparent);
+}
+
+.cards-row-wrapper.scroll-mask::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(10,22,40,0.96), transparent);
+}
+
 .senior-row,
 .junior-row {
-  padding-right: 220px;
+  padding-right: 180px;
 }
 
 .senior-row .card,
 .junior-row .card {
-  width: 250px;
+  width: calc((100% - 56px) / 5);
+  min-width: 205px;
+  max-width: 260px;
 }
 
 .senior-row .wide-thumb,
 .junior-row .wide-thumb {
-  height: 160px;
+  height: 180px;
 }
 
 .scroll-button {
   position: absolute;
-  top: 50%; transform: translateY(-50%);
+  top: 45%; transform: translateY(-50%);
   width: 34px; height: 34px;
   border: 1px solid rgba(79,179,255,0.35);
   border-radius: 50%;
@@ -624,6 +639,23 @@ button { cursor: pointer; font-family: inherit; }
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 11px; padding: 3px 9px; border-radius: 20px;
   background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);
+}
+
+/* Yearbook image strip inside About */
+.yearbook-grid {
+  display: flex; gap: 10px; margin-top: 14px;
+  overflow-x: auto; padding-bottom: 6px; padding-top: 6px;
+}
+.yearbook-item { flex: 0 0 auto; }
+.yearbook-item img {
+  width: 96px; height: 96px; object-fit: cover;
+  border-radius: 8px; border: 0.5px solid rgba(255,255,255,0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.yearbook-item img:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+
+@media (max-width: 640px) {
+  .yearbook-item img { width: 76px; height: 76px; }
 }
 
 /* ── Footer ─────────────────────────────────────────── */

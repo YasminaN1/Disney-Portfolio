@@ -24,14 +24,8 @@
       <a class="nav-link active" href="#home">Home</a>
       <a class="nav-link" href="#projects">Projects</a>
       <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#contact">Contact</a>
     </div>
     <div class="nav-right">
-      <div class="nav-icon">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </div>
       <div class="nav-avatar"><img src="imgs/Moana.png" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
     </div>
   </nav>
@@ -109,7 +103,6 @@
   <section id="projects" class="section">
     <div class="section-header">
       <span class="section-title">Continue where you left off</span>
-      <span class="section-more">See all</span>
     </div>
     <div class="cards-row continue-row">
       <div class="card card-continue" v-for="item in continueItems" :key="item.title">
@@ -134,7 +127,7 @@
       <span class="section-title">Senior Year</span>
       <span class="section-more" @click="toggleExpanded('senior')">{{ seniorExpanded ? 'Show less' : 'Browse all' }}</span>
     </div>
-    <div class="cards-row-wrapper">
+    <div class="cards-row-wrapper scroll-mask">
       <button class="scroll-button left" @click="scrollRow('left','seniorRow')" aria-label="Scroll senior row left">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
@@ -164,7 +157,7 @@
       <span class="section-title">Junior Year</span>
       <span class="section-more" @click="toggleExpanded('junior')">{{ juniorExpanded ? 'Show less' : 'Browse all' }}</span>
     </div>
-    <div class="cards-row-wrapper">
+    <div class="cards-row-wrapper scroll-mask">
       <button class="scroll-button left" @click="scrollRow('left','juniorRow')" aria-label="Scroll junior row left">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
@@ -223,17 +216,14 @@
     <div class="section-header"><span class="section-title">About me</span></div>
     <div class="about-card">
       <div class="about-avatar-wrap">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fb3ff" stroke-width="1.5">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-          <circle cx="12" cy="7" r="4"/>
-        </svg>
+        <img src="imgs/Yearbook.png" alt="Yearbook photo" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="about-content">
-        <p class="about-name">Yasmina Nigmanova — Role / Title</p>
-        <p class="about-bio">A short bio about who you are, what you do, and what you're passionate about. Keep it personal and memorable.</p>
+        <p class="about-name">Yasmina Nigmanova — Senior, Marlboro High School</p>
+        <p class="about-bio">My name is Yasmina Nigmanova, and I am a senior at Marlboro High School with strong interests in leadership, community service, healthcare, and the arts. I have been actively involved in my school through roles such as Student Council Vice President, Executive Board Vice President, founder of the Slavic Society Club, and member of Anytown: Leaders of Diversity, while also completing over 200 hours of volunteer service and gaining experience in childcare and orthodontics. Outside of academics, I am a pianist who performed at Carnegie Hall, a longtime dancer, and a swim team manager who is passionate about leadership, creativity, and making a positive impact in my community.</p>
         <div class="about-pills">
-          <span class="pill">📍 City, Country</span>
-          <span class="pill">💼 Open to work</span>
+          <span class="pill">📍 Morganville, New Jersey</span>
+          <span class="pill">🏫 New York University</span>
         </div>
       </div>
     </div>
@@ -253,20 +243,40 @@
     </div>
   </section>
 
-  <!-- LATEST WORK -->
-  <section class="section section-last">
-    <div class="section-header">
-      <span class="section-title">Latest work</span>
-      <span class="section-more">All projects</span>
-    </div>
-    <div class="cards-row">
-      <div class="card card-tall" v-for="w in latestWork" :key="w.title">
-        <div class="card-thumb tall-thumb">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" v-html="w.icon"></svg>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-header"><span class="section-title">Contact</span></div>
+    <div class="cards-row contact-row">
+      <div class="card card-wide">
+        <div class="card-thumb wide-thumb" style="display:flex;align-items:center;justify-content:center;background:#0c1c33;">
+          <div style="text-align:center;color:#fff;">
+            <div style="font-weight:700;margin-bottom:6px;">Email</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.8);">y.nigmanova21@gmail.com</div>
+          </div>
         </div>
-        <div class="card-body">
-          <p class="card-title sm">{{ w.title }}</p>
-          <p class="card-sub">{{ w.year }}</p>
+      </div>
+      <div class="card card-wide">
+        <div class="card-thumb wide-thumb" style="display:flex;align-items:center;justify-content:center;background:#0c1c33;">
+          <div style="text-align:center;color:#fff;">
+            <div style="font-weight:700;margin-bottom:6px;">Instagram</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.8);">@yasmina_n_21</div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-wide">
+        <div class="card-thumb wide-thumb" style="display:flex;align-items:center;justify-content:center;background:#0c1c33;">
+          <div style="text-align:center;color:#fff;">
+            <div style="font-weight:700;margin-bottom:6px;">GitHub</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.8);">YasminaN1</div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-wide">
+        <div class="card-thumb wide-thumb" style="display:flex;align-items:center;justify-content:center;background:#0c1c33;">
+          <div style="text-align:center;color:#fff;">
+            <div style="font-weight:700;margin-bottom:6px;">Phone</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.8);">848-308-0575</div>
+          </div>
         </div>
       </div>
     </div>

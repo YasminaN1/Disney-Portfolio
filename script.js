@@ -2,16 +2,19 @@
 const splash = document.getElementById('splash-screen');
 const main = document.getElementById('app');
 
-// Simulate a loading time of 3 seconds
-setTimeout(() => {
+function revealMainContent() {
+    if (!splash || !main) return;
     splash.style.opacity = '0'; // Fade out
-    
     setTimeout(() => {
         splash.style.display = 'none';
         main.style.display = 'block';
         document.body.style.overflow = 'auto'; // Allow scrolling
     }, 1000); // Matches the CSS transition time
-}, 3000);
+}
+
+window.addEventListener('load', () => {
+    setTimeout(revealMainContent, 3000);
+});
 
 // ═══════════════════════════════════════════════════════════
 //  YASMINA NIGMANOVA — PORTFOLIO  |  main.js
@@ -44,7 +47,7 @@ const portfolioData = {
   featuredProjects: [
     {
       title: "UNC Chapel Hill",
-      sub: "Senior showcase · 2024",
+      sub: "GitHub · 2025",
       description: "A polished senior project highlighting brand design and interactive detail.",
       link: "https://yasminan1.github.io/College-Recruitment/",
       detailsPage: "capel-hill.html",
@@ -53,7 +56,7 @@ const portfolioData = {
     },
     {
       title: "KC Nail Art",
-      sub: "Senior branding · 2024",
+      sub: "GitHub · 2026",
       description: "Beauty branding with a rich visual identity and immersive interface.",
       link: "https://yasminan1.github.io/KC-Nail-Art/",
       detailsPage: "kc-nail-art.html",
@@ -62,7 +65,7 @@ const portfolioData = {
     },
     {
       title: "Christmas Buzzfeed Quiz",
-      sub: "Senior campaign · 2024",
+      sub: "GitHub · 2025",
       description: "A festive interactive quiz experience built for holiday engagement.",
       link: "https://yasminan1.github.io/BuzzfeedChristmas/",
       detailsPage: "christmas-buzzfeed-quiz.html",
@@ -71,7 +74,7 @@ const portfolioData = {
     },
     {
       title: "The Search For The Forgotten Crown",
-      sub: "Junior adventure UI · 2023",
+      sub: "GitHub · 2024",
       description: "A storytelling-driven interface that guides users through an immersive journey.",
       link: "https://yasminan1.github.io/NovWebsite/",
       detailsPage: "search-for-the-forgotten-crown.html",
@@ -80,7 +83,7 @@ const portfolioData = {
     },
     {
       title: "Little Bird Toy Co.",
-      sub: "Junior brand design · 2023",
+      sub: "GitHub · 2025",
       description: "A playful retail concept with bright visuals and engaging product displays.",
       link: "https://yasminan1.github.io/LittleBirdToyCo_J/",
       detailsPage: "little-bird-toy-co.html",
@@ -89,7 +92,7 @@ const portfolioData = {
     },
     {
       title: "Rangers Team Roster",
-      sub: "Junior roster app · 2023",
+      sub: "GitHub · 2025",
       description: "A team roster interface with clean structure and easy navigation.",
       link: "https://yasminan1.github.io/MayWebsite/",
       detailsPage: "rangers-team-roster.html",
@@ -98,7 +101,7 @@ const portfolioData = {
     },
     {
       title: "Vacation in Santorini",
-      sub: "Sophomore visual systems · 2022",
+      sub: "Replit · 2023",
       description: "A scenic concept that pairs elegant visuals with polished layout design.",
       link: "https://71ca19e0-aff7-47bf-b54c-a99562ef70a9-00-1m38iwofyuc49.picard.repl.co/",
       detailsPage: "santorini.html",
@@ -107,7 +110,7 @@ const portfolioData = {
     },
     {
       title: "Tabayer",
-      sub: "Sophomore campaign · 2022",
+      sub: "Replit · 2024",
       description: "A luxury campaign project with bold typography and refined branding.",
       link: "https://8509c2f4-3a17-4afb-bdb3-56c276d46ea6-00-kvie6fve7bs4.worf.replit.dev/",
       detailsPage: "tabayer.html",
@@ -116,7 +119,7 @@ const portfolioData = {
     },
     {
       title: "Coral Cove",
-      sub: "Sophomore illustration · 2022",
+      sub: "Replit · 2023",
       description: "A colorful illustration piece focused on seaside storytelling.",
       link: "https://f8258f4b-977e-4c6f-b866-3f81513990e0-00-39f7bz2ym8y8a.janeway.repl.co/",
       detailsPage: "coral-cove.html",
@@ -129,61 +132,61 @@ const portfolioData = {
   seniorProjects: [
     {
       title: "College Recruitment",
-      sub: "Senior showcase · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/College-Recruitment/",
       image: "imgs/CollegeRecruitment_Sr.png"
     },
     {
       title: "JS Functions Demo",
-      sub: "Social design · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/1.01-Functions-Refresher/",
       image: "imgs/FunctionsDemo_S.png"
     },
     {
       title: "Arrays & Loops Demo",
-      sub: "Social design · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/Array-Loop-Refresher/",
       image: "imgs/ArrayLoopsRefresher_S.png"
     },
     {
       title: "Event Listener Demo",
-      sub: "Social design · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/Event-Listeners-Refresher//",
       image: "imgs/EventListenerDemo_S.png"
     },
     {
       title: "Cards With Friends",
-      sub: "Social design · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/Cards-with-Friends/",
       image: "imgs/CardsWithFriends_Sr.png"
     },
     {
       title: "Class Schedules",
-      sub: "Planner interface · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/Class-Schedule-Project/",
       image: "imgs/ClassSchedules_Sr.png"
     },
     {
       title: "Album Gallery",
-      sub: "Photo album UI · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/SlideshowProject/",
       image: "imgs/AlbumGallery_Sr.png"
     },
     {
       title: "Retro Cinema Collection",
-      sub: "Film archive · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/Movie-Posters/",
       image: "imgs/RetroCinemaCollection_Sr.png"
     },
     {
       title: "Christmas Buzzfeed Quiz",
-      sub: "Holiday campaign · 2024",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/BuzzfeedChristmas/",
       image: "imgs/ChristmasBuzzfeedQuiz_Sr.png"
     },
     {
       title: "KC Nail Art",
-      sub: "Beauty branding · 2024",
+      sub: "GitHub · 2026",
       link: "https://yasminan1.github.io/KC-Nail-Art/",
       image: "imgs/KCNailArt_Sr.png"
     }
@@ -192,97 +195,97 @@ const portfolioData = {
   juniorProjects: [
      {
       title: "Summertainment Travels",
-      sub: "Adventure web design · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/Summer-tainment-site/index.html",
       image: "imgs/Summertainment_J.png"
     },
     {
       title: "Thomas Edison Interactive",
-      sub: "Historical animation · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/OctWebsite/",
       image: "imgs/ThomasEdison_J.png"
     },
     {
       title: "Ghost Animation",
-      sub: "Historical animation · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/SpookyTca1/ ",
       image: "imgs/Ghost_J.png"
     },
     {
       title: "Pumpkin Animation",
-      sub: "Historical animation · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/PumpkinTca1/",
       image: "imgs/Minnie_J.png"
     },
     {
       title: "The Search For The Forgotten Crown",
-      sub: "Adventure web design · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/NovWebsite/",
       image: "imgs/TheSearchForTheForgottenCrown_J.png"
     },
     {
       title: "8Ball Game",
-      sub: "Interactive game · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/MagicEightBall/",
       image: "imgs/8Ball_J.png"
     },
     {
       title: "Bridgerton Name Generator",
-      sub: "Creative UI · 2023",
+      sub: "GitHub · 2024",
       link: "https://yasminan1.github.io/DecWebsite/",
       image: "imgs/BridgertonName_J.png"
     },
     {
       title: "Monthly Gallery",
-      sub: "Creative UI · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/MonthlyWebsiteGallery/",
       image: "imgs/MonthlyWebsites_J.png"
     },
     {
       title: "Rock Paper Scissors",
-      sub: "Creative UI · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/JanWebsite/",
       image: "imgs/RPS_J.png"
     },
     {
       title: "Postcard Generator",
-      sub: "Front-end tool · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/PostcardGenerator/",
       image: "imgs/PostcardGenerator_J.png"
     },
     {
       title: "James K. Polk History",
-      sub: "Front-end tool · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/Febwebsite/",
       image: "imgs/JamesKPolk_J.png"
     },
     {
       title: "To-Do List",
-      sub: "Front-end tool · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/ToDoList/",
       image: "imgs/ToDoList_J.png"
     },
      {
       title: "Moana Hangman",
-      sub: "Game design · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/MarchWebsite/",
       image: "imgs/MoanaHangman_J.png"
     },
     {
       title: "The Storm Court Story",
-      sub: "Story-driven UI · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/AprilWebsite/",
       image: "imgs/TheStormCourtStory_J.png"
     },
      {
       title: "Rangers Team Roster",
-      sub: "Roster app · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/MayWebsite/",
       image: "imgs/RangersTeamRoster_J.png"
     },
     {
       title: "Little Bird Toy Co.",
-      sub: "Brand design · 2023",
+      sub: "GitHub · 2025",
       link: "https://yasminan1.github.io/JuneWebsite/",
       image: "imgs/LittleBirdToyCo_J.png"
     },
@@ -291,35 +294,35 @@ const portfolioData = {
   sophomoreProjects: [
     {
       title: "Coral Cove Cafe",
-      sub: "Illustration · 2022",
+      sub: "Replit · 2023",
       link: "https://f8258f4b-977e-4c6f-b866-3f81513990e0-00-39f7bz2ym8y8a.janeway.repl.co/",
       image: "imgs/CoralCove_S.png",
       icon: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>`
     },
     {
       title: "Farmer's Market",
-      sub: "Branding · 2022",
+      sub: "Replit · 2023",
       link: "https://940b8c34-5183-4f4e-90cf-e4c6d0af6b8e-00-nylhb5qh578q.janeway.repl.co/",
       image: "imgs/FarmerMarket_S.png",
       icon: `<path d="M12 2l4 7H8l4-7z"/><path d="M5 9h14v11H5z"/>`
     },
     {
       title: "Memorial Sloan Kettering Cancer Center",
-      sub: "Motion design · 2022",
+      sub: "Replit · 2024",
       link: "https://48a7ae20-75c0-4792-8f1f-f0cdf09cbec6-00-3ovnz46po2q2.worf.replit.dev/",
       image: "imgs/MemorialSloan_S.png",
       icon: `<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>`
     },
     {
       title: "Vacation in Santorini",
-      sub: "Visual systems · 2022",
+      sub: "Replit · 2024",
       link: "https://71ca19e0-aff7-47bf-b54c-a99562ef70a9-00-1m38iwofyuc49.picard.repl.co/",
       image: "imgs/Santorini_S.png",
       icon: `<rect x="4" y="4" width="16" height="16" rx="3"/><line x1="4" y1="12" x2="20" y2="12"/>`
     },
     {
       title: "Tabayer Jewelry",
-      sub: "Campaign launch · 2022",
+      sub: "Replit · 2024",
       link: "https://8509c2f4-3a17-4afb-bdb3-56c276d46ea6-00-kvie6fve7bs4.worf.replit.dev/",
       image: "imgs/Tabayer_S.png",
       icon: `<path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="5"/>`
@@ -375,6 +378,7 @@ createApp({
   data() {
     return {
       featuredIndex: 0,
+      featuredProjects: portfolioData.featuredProjects,
       continueItems:    portfolioData.continueItems,
       seniorProjects:   portfolioData.seniorProjects,
       juniorProjects:   portfolioData.juniorProjects,
