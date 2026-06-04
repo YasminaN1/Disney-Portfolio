@@ -32,8 +32,8 @@ const portfolioData = {
       title: "Shaili's Spotify",
       sub: " 70% complete",
       progress: 70,
-      link: "#",
-      image: ""
+      link: "https://shaili-patel.github.io/Portfolio/",
+      image: "imgs/image.png"
     },
     {
       title: "Aly's Netflix",
