@@ -44,7 +44,8 @@ const portfolioData = {
     }
   ],
 
-  featuredProjects: [
+  // Featured carousel projects for the hero section
+  featuredProjects: [ 
     {
       title: "UNC Chapel Hill",
       sub: "GitHub · 2025",
@@ -192,6 +193,7 @@ const portfolioData = {
     }
   ],
 
+  // Junior year projects
   juniorProjects: [
      {
       title: "Summertainment Travels",
@@ -291,6 +293,7 @@ const portfolioData = {
     },
   ],
 
+  // Sophomore year projects
   sophomoreProjects: [
     {
       title: "Coral Cove Cafe",
@@ -329,7 +332,7 @@ const portfolioData = {
     }
   ],
 
-  // Skills grid — square cards
+  // Extracurricular skills and activity cards
   skills: [
     { label: "Student Council Vice President (3 Years)", image: "imgs/Stuco3Yrs.png" },
     { label: "Executive Board Vice President (Senior Year)", icon: `<path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>`, image: "imgs/ExeBoard.png" },
@@ -344,7 +347,7 @@ const portfolioData = {
     { label: "Swim Team Manager", icon: `<path d="M2 14c4-4 8-4 12 0s8 4 12 0"/><path d="M2 18c4-4 8-4 12 0s8 4 12 0"/>`, image: "imgs/SwimTeam.png" }
   ],
 
-  // Most recent work — tall portrait cards
+  // Latest work / supplemental portfolio stats
   latestWork: [
     {
       title: "Figma system",
@@ -377,6 +380,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      // application state
       featuredIndex: 0,
       featuredProjects: portfolioData.featuredProjects,
       continueItems:    portfolioData.continueItems,
@@ -398,11 +402,13 @@ createApp({
     };
   },
   computed: {
+    // derived state
     featuredProject() {
       return this.featuredProjects[this.featuredIndex] || this.featuredProjects[0];
     }
   },
   methods: {
+    // interaction handlers
     prevFeatured() {
       this.featuredIndex = this.featuredIndex > 0
         ? this.featuredIndex - 1

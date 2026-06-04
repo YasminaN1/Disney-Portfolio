@@ -13,8 +13,12 @@
       <a class="nav-link active" href="index.html">Home</a>
     </div>
     <div class="nav-right">
-      <div class="nav-icon">&#9733;</div>
-      <div class="nav-avatar">YN</div>
+      <div class="nav-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <div class="nav-avatar"><img src="imgs/Moana.png" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
     </div>
   </nav>
 
@@ -23,7 +27,7 @@
       <div class="project-detail-banner" style="background-image: url('imgs/TheSearchForTheForgottenCrown_J.png');"></div>
       <div>
         <div class="project-detail-meta">
-          <span>Junior Year · 2023</span>
+          <span>Junior Year · 2024</span>
           <span>Adventure web design · Search for the Forgotten Crown</span>
         </div>
         <h1 class="project-detail-heading">The Search For The Forgotten Crown</h1>
@@ -31,21 +35,12 @@
 
       <section class="detail-section">
         <h2>Description</h2>
-        <p>This adventure-themed website presents rich story content through a dramatic interface. It combines immersive visuals, layered cards, and evocative typography to invite users into a narrative experience.</p>
+        <p>This is a single-page mad lib style story generator themed around the TV show Outer Banks. When the page loads, a series of prompts ask the user for their name, a feeling, a place, a time, and a few other words, then plugs all of their answers into a pre-written adventure letter that gets displayed on top of a decorative letter image, set against an Outer Banks beach background.</p>
       </section>
 
       <section class="detail-section">
         <h2>Code Used</h2>
-        <p>Built using HTML and CSS with a focus on layered imagery and responsive layout. I used CSS positioning, gradients, and text styling to create a moody atmosphere that supports the adventure theme.</p>
-      </section>
-
-      <section class="detail-section">
-        <h2>What I Learned</h2>
-        <ul>
-          <li>How to design a narrative website that feels immersive without relying on heavy animation.</li>
-          <li>How to use spacing and contrast to guide the viewer through story sections.</li>
-          <li>How to make dramatic visuals still feel accessible and readable on screen.</li>
-        </ul>
+        <p>The code here is intentionally simple and focused, which is part of what makes it a good project. The entire interactive logic is just a handful of prompt calls storing user input into variables, then a template literal that weaves all those variables into a paragraph using the backtick syntax. That single line injecting the content into the page with innerHTML is doing all the heavy lifting. The CSS does something clever by layering the letter text directly on top of an image of a handwritten letter using precise padding, making it look like the words are actually written on the paper. The handwriting-style font and the glowing gold text shadow on the title add to the storytelling atmosphere.</p>
       </section>
 
       <a class="btn-play" href="index.html">Back to portfolio</a>

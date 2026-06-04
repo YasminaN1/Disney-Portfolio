@@ -1,4 +1,7 @@
 
+/* ====== Base Styles & Typography ====== */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Orbitron:wght@700&family=Righteous&family=Share+Tech+Mono&display=swap');
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -6,7 +9,11 @@ body {
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Trebuchet MS', sans-serif;
   min-height: 100vh;
-  overflow: hidden; /* For splash screen */
+}
+
+.nav-link,
+.nav-logo a {
+  text-decoration: none;
 }
 
 button { cursor: pointer; font-family: inherit; }
@@ -42,7 +49,7 @@ button { cursor: pointer; font-family: inherit; }
   background: #040e1f;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 14px 28px;
   border-bottom: 0.5px solid rgba(255,255,255,0.08);
   position: sticky;
@@ -50,42 +57,48 @@ button { cursor: pointer; font-family: inherit; }
   z-index: 100;
 }
 
-.nav-logo {
-  font-size: 20px;
+.nav-logo,
+.nav-logo a {
+  font-family: 'Bangers', cursive;
+  font-size: 22px;
   font-weight: 700;
   color: #4fb3ff;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 6px rgba(79,179,255,0.25);
 }
 
-.nav-links { display: flex; gap: 24px; }
+.nav-logo { position: absolute; left: 28px; }
+
+.nav-links { display: flex; gap: 28px; }
 
 .nav-link {
   font-size: 13px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.75);
   cursor: pointer;
   transition: color 0.2s;
 }
 .nav-link:hover, .nav-link.active { color: #fff; }
 
-.nav-right { display: flex; align-items: center; gap: 14px; }
-
-.nav-icon {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.5);
-  cursor: pointer;
+.nav-right {
+  position: absolute;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
+
+.nav-icon { display: none; }
 
 .nav-avatar {
-  width: 30px; height: 30px;
-  border-radius: 6px;
-  background: #1e5fa0;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: transparent;
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: #fff;
+  overflow: hidden;
   cursor: pointer;
 }
+
+.nav-avatar img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ── Hero ───────────────────────────────────────────── */
 .hero {
@@ -270,6 +283,7 @@ button { cursor: pointer; font-family: inherit; }
   .cards-row-wrapper.expanded .cards-row { grid-template-columns: repeat(1, 1fr); }
 }
 
+/* ====== Detail Page Layout ====== */
 .project-page {
   padding: 32px 28px 48px;
   max-width: 1160px;

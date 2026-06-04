@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capel Hill | Learn More</title>
+  <title>UNC Chapel Hill | Learn More</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,8 +13,12 @@
       <a class="nav-link active" href="index.html">Home</a>
     </div>
     <div class="nav-right">
-      <div class="nav-icon">&#9733;</div>
-      <div class="nav-avatar">YN</div>
+      <div class="nav-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <div class="nav-avatar"><img src="imgs/Moana.png" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
     </div>
   </nav>
 
@@ -23,29 +27,20 @@
       <div class="project-detail-banner" style="background-image: url('imgs/CollegeRecruitment_Sr.png');"></div>
       <div>
         <div class="project-detail-meta">
-          <span>Senior Year · 2024</span>
-          <span>Brand design · Capel Hill</span>
+          <span>Senior Year · 2025</span>
+          <span>Brand design · UNC Chapel Hill</span>
         </div>
-        <h1 class="project-detail-heading">Capel Hill</h1>
+        <h1 class="project-detail-heading">UNC Chapel Hill</h1>
       </div>
 
       <section class="detail-section">
         <h2>Description</h2>
-        <p>Capel Hill is a senior portfolio project focused on brand expression and interactive layout. It presents a recruitment-style site with a strong visual hierarchy, expressive imagery, and polished content blocks that support the concept.</p>
+        <p>This is a four-page college recruitment website built for UNC Chapel Hill. It covers a welcome page, an academic programs page, a student life page, and a cost and financial aid page. The site has a polished, professional feel that matches the prestige of the school, using Carolina blue tones, campus photography, and a looping background video on the home page to immediately set the atmosphere.</p>
       </section>
 
       <section class="detail-section">
         <h2>Code Used</h2>
-        <p>This page was built with HTML for structure, CSS for responsive layout, and subtle interactions. I used flexbox for layout sections, custom typography styles, and color palettes to emphasize the brand. The hero and content cards rely on CSS gradients, border accents, and smooth hover states.</p>
-      </section>
-
-      <section class="detail-section">
-        <h2>What I Learned</h2>
-        <ul>
-          <li>How to create a branded visual system with consistent spacing and imagery.</li>
-          <li>How to use CSS to enhance content emphasis without overwhelming the design.</li>
-          <li>How to balance readability with stylized layout components on a modern portfolio page.</li>
-        </ul>
+        <p>The code across the project draws heavily on HTML, CSS, and Bootstrap, but also introduces JavaScript in a meaningful way for the first time. The home page features a series of entrance animations where the logo, heading, slogan, and info cards all fade and slide in sequentially using CSS keyframe animations with staggered delays, giving the page a cinematic first impression. A looping video is used as a full-screen background, fixed behind the content using z-index layering with a semi-transparent overlay on top to keep text readable. The academic page goes further by using JavaScript to build an actual interactive filtering system, where clicking category buttons shows or hides faculty cards based on their department tag. There's also commented-out code for a quick-view modal, which shows you were experimenting with more complex popup functionality. </p>
       </section>
 
       <a class="btn-play" href="index.html">Back to portfolio</a>

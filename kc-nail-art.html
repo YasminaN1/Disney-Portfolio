@@ -13,8 +13,12 @@
       <a class="nav-link active" href="index.html">Home</a>
     </div>
     <div class="nav-right">
-      <div class="nav-icon">&#9733;</div>
-      <div class="nav-avatar">YN</div>
+      <div class="nav-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <div class="nav-avatar"><img src="imgs/Moana.png" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
     </div>
   </nav>
 
@@ -31,21 +35,13 @@
 
       <section class="detail-section">
         <h2>Description</h2>
-        <p>KC Nail Art is a beauty branding project with a refined interface built to showcase services, product details, and brand storytelling. The design uses elegant layouts, delicate color accents, and texture-inspired patterns.</p>
+        <p>This is a single-page website built for a real nail art business called KC Nail Art, run out of Morganville, NJ. The page is divided into three sections — a welcome/hero section, a services collection, and a contact/booking section — all connected by smooth anchor link navigation. The aesthetic is luxurious and editorial, using a warm gold, blush, and cream palette with script fonts to communicate a high-end salon experience.</p>
       </section>
 
       <section class="detail-section">
         <h2>Code Used</h2>
-        <p>The page was written in HTML and styled with CSS using grid and flexbox layouts. I used custom button states, subtle box shadows, and layered backgrounds to bring the brand to life. Responsive design ensured the project scaled cleanly across screen sizes.</p>
-      </section>
-
-      <section class="detail-section">
-        <h2>What I Learned</h2>
-        <ul>
-          <li>How to design a product-focused brand experience using minimalist UI.</li>
-          <li>How to use CSS to support a luxury tone with soft gradients and refined spacing.</li>
-          <li>How to maintain consistency across multiple visual sections in a landing page layout.</li>
-        </ul>
+        <p>The code here is noticeably more polished and intentional than earlier projects. CSS custom properties are used throughout to define the entire color palette in one place, making the design consistent and easy to adjust. The hero section layers multiple elements — a full background image, a dark overlay, and three animating rings that pulse using keyframes, to create depth without any images doing that work alone. Elements like the logo and headline fade and slide in on load through CSS animations with staggered delays, similar to the UNC project but more refined in execution. The service cards use a side-by-side image and text layout that collapses into a vertical stack on mobile, and the contact section uses a CSS Grid layout that reorganizes itself at tablet and mobile breakpoints. Scroll reveal is handled through the Intersection Observer API, and the mobile hamburger menu is built from scratch rather than relying on Bootstrap's built-in collapse component.
+</p>
       </section>
 
       <a class="btn-play" href="index.html">Back to portfolio</a>

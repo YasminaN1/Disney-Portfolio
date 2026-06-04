@@ -13,8 +13,12 @@
       <a class="nav-link active" href="index.html">Home</a>
     </div>
     <div class="nav-right">
-      <div class="nav-icon">&#9733;</div>
-      <div class="nav-avatar">YN</div>
+      <div class="nav-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <div class="nav-avatar"><img src="imgs/Moana.png" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
     </div>
   </nav>
 
@@ -31,21 +35,12 @@
 
       <section class="detail-section">
         <h2>Description</h2>
-        <p>This project is a clean roster interface designed to present team information clearly. It uses structured card layouts and straightforward navigation so viewers can find player details quickly.</p>
+        <p>This is a two-page fan website dedicated to the New York Rangers. The home page is a cinematic landing page with a looping video background, a glitch-effect title, stacked cards with team history text, a glowing call-to-action button, and animated social media icons. The roster page displays all 26 players in a grid of cards with their photo, position, age, and a button that opens a Bootstrap modal with a fun fact about each player.</p>
       </section>
 
       <section class="detail-section">
         <h2>Code Used</h2>
-        <p>Built with HTML and CSS, the page uses columned card layout and typographic hierarchy to organize player info. I implemented responsive wrappers and used spacing to separate content areas effectively.</p>
-      </section>
-
-      <section class="detail-section">
-        <h2>What I Learned</h2>
-        <ul>
-          <li>How to create an easy-to-scan interface for informational content.</li>
-          <li>How to use consistent card styling for repeated content structures.</li>
-          <li>How to balance text and visuals for a sports-themed design.</li>
-        </ul>
+        <p>The code here pulls together a lot of skills in a confident way. The glitch text effect on the home page is a clever pure-CSS technique that uses pseudo-elements with different colored clip-paths, each animating slightly out of sync to create that distorted glitch look. The glowing button is also built entirely in CSS using layered box-shadow and text-shadow values, giving it a neon light feel that fits the hockey aesthetic. The social media icons have a hover effect where each one reveals a tooltip and shifts to its platform's brand color, which is a nice interactive touch. On the roster page, all player data lives in a separate JavaScript file as an array of objects, and the roster script loops through it to dynamically build every card on the page rather than writing them out in HTML by hand. Clicking a player's fun fact button triggers a Bootstrap modal that gets populated with that player's info on the fly.</p>
       </section>
 
       <a class="btn-play" href="index.html">Back to portfolio</a>
